@@ -1,0 +1,32 @@
+{%  extends 'store/usermainad.html' %}
+{% block content %}
+{%  include 'store/status.html' %}
+
+<div class="row">
+	<div class="col-md">
+		<div class="card card-body">
+			<table class="table table-sm">
+				<tr>
+					<th>Order Id</th>
+					<th>Note</th>
+					<th>Date Ordered</th>
+					<th>Status</th>
+				</tr>
+
+				{% for order in orders %}
+
+				<tr>
+					<td><a href="{% url 'userorderlist' order.id %}">{{order.id}}</a></td>
+					<td>{{order.note}}</td>
+					<td>{{order.date_ordered}}</td>
+					<td>{{order.status}}</td>
+				</tr>
+				{% endfor %}
+
+			</table>
+		</div>
+		<a  class="btn btn-outline-dark" href="{% url 'store' %}">&#x2190; BACK</a>
+	</div>
+</div>
+
+{% endblock content %}

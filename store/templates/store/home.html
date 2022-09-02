@@ -1,0 +1,226 @@
+<!Doctype html>
+    {% load static %}
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <title>Joetom Foods</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" >
+
+   
+
+<body>
+
+    <header class="header" id="header">
+        
+        <a href="#" class="logo" > <i class="fas fa-shopping-basket"></i>Joetom Food</a>
+       
+     
+    
+        <nav class="navbar">
+            <a href="">Home</a>
+            <a href="{% url 'store' %}">Shop</a>
+            <a href="{% url 'contact' %}">Contact</a>
+            <a href="">About Us</a>
+        </nav>
+    
+        <div class="icons">
+            <div class="fas fa-bars" id="menu-btn"></div>
+            <a href="{% url 'cart' %}"><div class="fas fa-shopping-cart" id="cart-btn"></div></a>
+            <a href="{% url 'login' %}"><div class="fas fa-user" id="login-btn"></div></a>
+        </div>
+    
+
+        
+    <!--<form action="" class="login-form">
+        <h3>login</h3>
+        <input type="email" placeholder="your email" class="box">
+        <input type="password" placeholder="your password" class="box">
+        <p>forget your password <a href="#">click here</a></p>
+        <p>don't have an account <a href="{% url 'register' %}">create now</a></p>
+        <input type="submit" value="login now" class="btn">
+    </form>-->
+
+    
+
+        </header>
+
+    <section class= "home" id="home">
+        <div id="internal">
+
+     <h4 data-text="Welcome To Joetom QuickFoods "> Welcome To Joetom QuickFood </h4>
+              
+     <a href="#products"><button class="btn1">Shop Now</button></a>
+     <a href="{% url 'contact' %}"><button class="btn2">Contact Us</button></a>
+     
+
+            </div>
+           
+            <div class="slider_img-box">
+                <div>
+                  <img src="{% static 'images/slide-img.png' %}" alt="" class="" />
+                </div>
+        </div>
+
+    </section>
+
+    <section class="products" id="products">
+
+        <h1 class="heading"> our <span>products</span> </h1>
+    
+        <div class="swiper product-slider">
+    
+            <div class="swiper-wrapper">
+    
+                <div class="swiper-slide box">
+                    <img src="" alt="">
+                    <h3>Spices</h3>
+                </div>
+    
+                <div class="swiper-slide box">
+                    <img src="" alt="">
+                    <h3>Breakfast</h3>
+                </div>
+    
+            </div>
+    
+        </div>
+    
+    </section>
+    <section>
+
+<footer class="footer">    
+        
+    
+    <div class="container">
+        <div class="row">
+            
+            <div class="footer-col">
+                
+                <ul class="social-media">
+                   <li> <a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                    <li><a href="#" ><ion-icon name="logo-instagram"></ion-icon></a></li>
+                    <li><a href="#" ><ion-icon name="logo-twitter"></ion-icon></a></li>
+                    <li> <a href="#" ><ion-icon name="logo-whatsapp"></ion-icon></a></li>
+                </ul>
+                   <ul class="links">
+                    <li><a href="#"> Home </a></li>
+                    <li><a href="#"> Products </a></li>
+                    <li><a href="#"> About Us </a></li>
+                   <li> <a href="#"> Contact Us </a></li>
+                </ul>
+
+                <p>©2022 QuickFex Development &nbsp;&nbsp;|&nbsp; &nbsp;&nbsp;&nbsp;All Rights Reserved</p>
+     </div>
+        </div>
+    </div>
+</footer>
+
+
+<style type="text/css">
+
+    .footer{
+    position: relative;
+    min-height: 100px;
+    padding: 20px 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(36, 188, 36);
+    flex-direction: column;
+  
+}
+
+.social-media, .footer .links{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+
+}
+
+li{
+    list-style: none;
+    
+}
+
+.footer .social-media li a{
+    font-size: 2rem;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+    color: white;
+   
+}
+
+.footer .social-media li a:hover{
+    transform: translateY(-10px);
+
+}
+
+.footer .links li a{
+    font-size: 16px;
+    color: white;
+    margin: 0 10px;
+    display: inline-block;
+    text-decoration: none;
+    opacity: 1;
+ }
+
+ .footer .links li a:hover{
+    opacity: 0.75;
+ }
+
+ .footer p{
+    text-align: center;
+    color: white;
+  
+ }
+</style>
+
+
+
+<script type="text/javascript" src="{% static 'js/home.js' %}"></script>
+
+
+  <script type="text/javascript">
+          if (user == 'AnonymousUser'){
+               document.getElementById('hello-msg').classList.add("hidden");
+          }
+     </script>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

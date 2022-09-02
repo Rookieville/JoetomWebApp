@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, intial-scale=1.0">
+        <title>Contact Us</title>
+        <link rel="stylesheet" href="{% static 'css/contactpage.css' %}">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" >
+        
+    
+    <body>
+
+        <header class="header" id="header">
+        
+            <a href="#" class="logo" > <i class="fas fa-shopping-basket"></i>Joetom Food</a>
+           
+         
+        
+            <nav class="navbar">
+                <a href="{% url 'home' %}">Home</a>
+                <a href="{% url 'store' %}">Shop</a>
+                <a href="{% url 'contact' %}">Contact</a>
+                <a href="">About Us</a>
+            </nav>
+        
+            <div class="icons">
+                <div class="fas fa-bars" id="menu-btn"></div>
+                <a href="{% url 'cart' %}"><div class="fas fa-shopping-cart" id="cart-btn"></div></a>
+                <a href="{% url 'login' %}"><div class="fas fa-user" id="login-btn"></div></a>
+            </div>
+        
+            </header>
+    
+            <section class="pica">
+
+                <h2>#JoetomFoods4BetterLiving</h2>
+    </section>
+
+
+
+ 
+ <section class="contact">
+    <div class="contactform">
+
+
+<form action="https://formsubmit.co/rdanso2003@gmail.com" method="POST" />
+    <h2>How Can We Help You</h2>
+
+    <div class="inputbox"> 
+        <input type="text" name="Name" required="required">
+        <span>Full Name</span>
+    </div>
+    <div class="inputbox">
+        <input type="email" name="Email" required="required">
+        <span>Email</span>
+    </div>
+    <div class="inputbox">
+        <textarea  required="required"></textarea>
+        <span>Please Type Your Message Here</span>
+    </div>
+    <div class="inputbox">
+        <input type="submit" name="" value="send">
+        <span></span>
+    </div>
+
+</form>
+
+    </div>
+</section>
+
+
+
+
+
+
+
+
+      
+
+
+
+
+
+
+            <SCript src="e-commerce.js"></SCript>
+            <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+            <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    </body>
+</html>

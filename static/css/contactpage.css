@@ -1,0 +1,583 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400&display=swap');
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Cormorant SC', serif;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+}
+
+body{
+    background:#ffffff;
+  
+  
+}
+
+section{
+    padding:2rem 9%;
+}
+
+.heading{
+    text-align: center;
+    padding:2rem 0;
+    padding-bottom: 3rem;
+    font-size: 3.5rem;
+    color:black;
+}
+
+.heading span{
+    background: gold;
+    color:#fff;
+    display: inline-block;
+    padding:.5rem 3rem;
+    clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
+}
+
+
+.header{
+    position: fixed;
+    top:0; left:0; right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:2rem 9%;
+    background:#fff;
+    
+}
+
+
+.header .logo{
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color:black;
+    text-decoration: none;
+}
+
+.header .logo i{
+    color: rgb(40, 122, 128)
+}
+
+   
+
+
+.header .navbar a{
+    font-size: 2rem;
+    margin:0 1rem;
+    color: rgb(58, 190, 200);
+    text-decoration: none;
+}
+
+.header .navbar a:hover{
+    color: green;
+}
+
+.header .icons div{
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    border-radius: .5rem;
+    background: #eee;
+    color: rgb(9, 1, 1);
+    font-size: 2rem;
+    margin-left: .3rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+.header .icons div:hover{
+    background: rgba(89, 88, 125, 0.581);
+    color:rgb(70, 205, 81);
+}
+
+#menu-btn{
+    display: none;
+}
+
+.header .search-form{
+    position: absolute;
+    top:110%; right:-110%;
+    max-width: 50rem;
+    height:3rem;
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+
+}
+
+.header .search-form.active{
+    right:2rem;
+    transition: .4s linear;
+    
+}
+
+.header .search-form input{
+    height:100%;
+    width:100%;
+    background: none;
+    text-transform: none;
+    font-size: 1.6rem;
+    color:black;
+    padding:0 2rem;
+    border: none;
+}
+
+.header .search-form label{
+    font-size: 1.6rem;
+    padding: 1.5rem;
+    color:black;
+    cursor: pointer;
+}
+
+.header .search-form label:hover{
+    color:green;
+}
+
+.header .login-form{
+    position: absolute;
+    top:110%; right:-110%;
+    width:35rem;
+    padding:2rem;
+    border-radius: .3rem;
+    background: #fff;
+    text-align: center;
+}
+
+.header .login-form.active{
+    right:2rem;
+    transition: .4s linear;
+}
+
+.header .login-form h3{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: black;
+}
+
+.header .login-form .box{
+    width: 100%;
+    margin:.7rem 0;
+    background:#eee;
+    border-radius: .3rem;
+    padding:1rem;
+    font-size: 1.6rem;
+    color:black;
+    text-transform: none;
+}
+
+.header .login-form p{
+    font-size: 1.4rem;
+    padding:.5rem 0;
+    color:rgb(3, 3, 3);
+}
+
+.header .login-form p a{
+    color:gold;
+    text-decoration: underline;
+}
+
+section{
+
+    
+ }
+
+.home{
+    display: flex;
+     align-items: flex-start;
+    height: 99.6vh;
+    width: 100%;
+    background-color: white;
+    background-repeat:  no-repeat;
+    background-position: top 25% right 0;
+    background-size: cover;
+    padding-top: 25rem;
+    padding-bottom: 8rem;
+    font-size: 4.5rem;
+}
+
+.home h4{
+
+    color: green;
+    -webkit-text-stroke: 0.3vw white ;
+    text-transform: uppercase;
+    position: relative ;
+    padding-right: 30px;
+}
+
+.home h4::before{
+    content: attr(data-text);
+    position: relative;
+     top: 0;
+    left: 0;
+     width: 0;
+     height: 100%;
+     white-space: nowrap;
+     color: green;
+     -webkit-text-stroke: 0vw white;
+     overflow: hidden; 
+     animation: animate 6s linear 1;
+}
+
+@keyframes animate
+{
+    0%,10%,100%
+    {
+        width: 0;
+    }
+
+    70%,90%
+     {
+        width: 100%;
+     }
+
+}
+
+
+
+.home h5{
+    padding: 4px;
+    color: aqua;
+}
+.home h6{
+    padding: 4px;
+    color: aqua;
+}
+
+
+.slider_img-box {
+    width: 35%;
+    margin: 0 auto;
+  }
+  
+  .slider_img-box img {
+    width: 100%;
+  }
+
+ .btn1{
+
+    height: 45px;
+    width: 145px;
+    border: solid;
+    border-width: 0.5px; 
+    border-radius: 2px;
+    background: white;
+    box-shadow: inset 0 0 0 0 rgb(36, 188, 36) ;
+    font-size: 2rem;
+    transition: ease-out 0.2s;
+    outline: none;
+}
+
+.btn1:hover{
+    box-shadow: inset 145px 0 0 0   rgb(36, 188, 36);
+    cursor: pointer;
+    color: white;
+}
+
+.btn2{
+
+    height: 45px;
+    width: 145px;
+    border: solid;
+    border-width: 0.5px; 
+    border-radius: 2px;
+    background: white;
+    box-shadow: inset 0 0 0 0 rgb(36, 188, 36) ;
+    font-size: 2rem;
+    transition: ease-out 0.2s;
+    outline: none;
+}
+
+.btn2:hover{
+    box-shadow: inset -145px 0 0 0   rgb(36, 188, 36);
+    cursor: pointer;
+    color: white;
+}
+    
+    .products .product-slider{
+        padding:1rem;
+    }
+    
+    .products .product-slider:first-child{
+        margin-bottom: 2rem;
+    }
+    
+    .products .product-slider .box{
+        background: #fff;
+        border-radius: .5rem;
+        text-align: center;
+        padding:3rem 2rem;
+        outline-offset: -1rem;
+        outline: var(--outline);
+        box-shadow: var(--box-shadow);
+        transition: .2s linear;
+    }
+    
+    .products .product-slider .box:hover{
+        outline-offset: 0rem;
+        outline: var(--outline-hover);
+    }
+    
+    .products .product-slider .box img{
+        height:20rem;
+    }
+    
+    .products .product-slider .box h3{
+        font-size: 2.5rem;
+        color:var(--black);
+    }
+    
+    .products .product-slider .box .price{
+        font-size: 2rem;
+        color:var(--light-color);
+        padding:.5rem 0;
+    }
+    
+    .products .product-slider .box .stars i{
+        font-size: 1.7rem;
+        color:var(--orange);
+        padding:.5rem 0;
+    }
+   
+    
+
+   .pica{
+    
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 20vh;
+        font-size: 2rem;
+        background-image: url("banimg.jpg");
+        background-repeat:  no-repeat;
+        background-size: cover;
+        background-position: top 10% right 0;
+       
+ }
+
+ .pica h2{
+    font-size: 3.5rem;
+    color: white;
+    padding-top: 80px;
+
+ }
+
+ .contact{
+     width: 100%;
+    margin-left: 40px;
+     justify-content: center;
+     align-items: center;
+     padding: 50px 70px;
+     flex-direction: column;
+      display: flex;
+     
+      position: relative;
+ }
+  
+  .contactform{
+ 
+    width: 40%;
+     padding: 40px;
+     background: #fff;
+ }
+ 
+ .contactform h2{
+     font-size: 30px;
+     color: #333;
+     font-weight: 500;
+ 
+ }
+ 
+ .contactform .inputbox{
+     position: relative;
+     width: 100%;
+     margin-top: 10px;
+ }
+ 
+ .contactform .inputbox input,
+ .contactform .inputbox textarea{
+      width: 100%;
+      padding: 5px 0;
+     font-size: 16px;
+     margin: 10px 0;
+     border: none;
+     border-bottom: 1.5px solid black;
+     outline: none;
+     resize: none;
+ 
+ }
+ 
+ .contactform .inputbox span{
+     position: absolute;
+     left: 0%;
+     font-size: 1.5rem;
+     padding: 5px 0;
+     font-size: 16px;
+     margin: 10px 0;
+     pointer-events: none;
+     transition: 0.5s;
+     color: #555;
+ }
+ 
+ .contactform .inputbox input:focus ~ span,
+ .contactform .inputbox input:valid ~ span,
+ .contactform .inputbox textarea:focus ~ span,
+ .contactform .inputbox textarea:valid ~ span
+ 
+ {
+     color: #a08080;
+     font-size: 12px;
+     transform: translateY(-20px);
+ }
+     
+ .contactform .inputbox input[type="submit"]
+ {
+   width: 100px;
+   background:rgb(36, 188, 36) ;
+   color: #333;
+   border: none;
+   cursor: pointer;
+   padding: 10px;
+   font-size: 18px;
+   box-shadow: inset 0 0 0 0 white;
+ }
+ 
+ .contactform .inputbox input[type="submit"]:hover{
+ 
+     box-shadow: inset 0 36px 0 0 yellow;
+     color: #333;
+ }
+     
+    
+.signup{
+        width: 360px;
+        height: 680px;
+        margin: auto;
+        background-color: rgb(117, 110, 110);
+        border-radius: 5px;
+        box-shadow: rgb(12, 12, 12);
+        color: white;
+}
+  .signup  h1{
+    text-align: center;
+    padding: 10px;
+}
+
+.signup h4{
+    text-align: center;
+}
+
+.signup form{
+    width: 300px;
+    margin-left: 20px;
+   
+
+}
+
+.signup form label{
+    display: flex;
+    margin-top: 16px;
+    font-size: 18px;
+    margin-bottom: 3px;
+
+}
+
+.signup form input{
+   width: 100%;
+   padding: 7px;
+   border: none;
+   border: 2px solid #333;
+   border-radius: 4px;
+   outline: none;
+}
+
+.signup form input[type="button"] { 
+    margin-top: 20px;
+    width: 300px;
+  background:rgb(36, 188, 36) ;
+  color: #333;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px;
+  box-shadow: inset 0 0 0 0 white;
+  transition: ease-out 0.4s;
+
+}
+
+.signup form input[type="button"]:hover{
+    box-shadow: inset 300px 0 0 0 yellow;
+    color: #333;
+
+}
+.footer{
+    position: relative;
+    min-height: 100px;
+    padding: 20px 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(36, 188, 36);
+    flex-direction: column;
+  
+}
+
+.social-media, .footer .links{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+
+}
+
+li{
+    list-style: none;
+    
+}
+
+.footer .social-media li a{
+    font-size: 2rem;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+    color: white;
+   
+}
+
+.footer .social-media li a:hover{
+    transform: translateY(-10px);
+
+}
+
+.footer .links li a{
+    font-size: 16px;
+    color: white;
+    margin: 0 10px;
+    display: inline-block;
+    text-decoration: none;
+    opacity: 1;
+ }
+
+ .footer .links li a:hover{
+    opacity: 0.75;
+ }
+
+ .footer p{
+    text-align: center;
+    color: white;
+  
+ }
+ 

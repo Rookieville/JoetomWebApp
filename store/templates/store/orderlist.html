@@ -1,0 +1,40 @@
+{%  extends 'store/mainad.html' %}
+
+{% block content %}
+
+		<br>
+
+		<div class="row">
+			<div class="col-md">
+
+				<div class="card card-body">
+					 <a  class="btn btn-outline-dark" href="{% url 'dashboard' %}">&#x2190; BACK</a>
+					<h5>ORDER LIST</h5>
+
+				</div>
+				<div class="card card-body">
+					<table class="table">
+						<thead>
+							<tr>
+								<th>Products</th>
+								<th>Quantity</th>
+								<th>Price</th>
+							</tr>
+						</thead>
+						<tbody>
+							{% for item in orderitems %}
+							<tr>
+								<td>{{item.product}}</td>
+								<td>{{item.quantity}}</td>
+								<td>{{item.product.price}}</td>
+							</tr>
+							{% endfor %}
+							</tr>
+						</tbody>			
+					</table>
+				</div>
+			</div>
+			
+		</div>
+
+{% endblock content %}

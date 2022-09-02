@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <title>Ecom</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" >
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+ 
+
+    <script type="text/javascript">
+
+        var user = '{{request.user}}'
+
+        function getToken(name) {
+            var cookieValue = null;
+            if (document.cookie && document.cookie !== '') {
+                var cookies = document.cookie.split(';');
+                for (var i = 0; i < cookies.length; i++) {
+                    var cookie = cookies[i].trim();
+                    // Does this cookie string begin with the name we want?
+                    if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        }
+        var csrftoken = getToken('csrftoken')
+
+        function getCookie(name) {
+            // Split cookie string and get all individual name=value pairs in an array
+            var cookieArr = document.cookie.split(";");
+
+            // Loop through the array elements
+            for(var i = 0; i < cookieArr.length; i++) {
+                var cookiePair = cookieArr[i].split("=");
+
+                /* Removing whitespace at the beginning of the cookie name
+                and compare it with the given string */
+                if(name == cookiePair[0].trim()) {
+                    // Decode the cookie value and return
+                    return decodeURIComponent(cookiePair[1]);
+                }
+            }
+
+            // Return null if not found
+            return null;
+        }
+        var cart = JSON.parse(getCookie('cart'))
+
+        if (cart == undefined){
+            cart = {}
+            console.log('Cart Created!', cart)
+            document.cookie ='cart=' + JSON.stringify(cart) + ";domain=;path=/"
+        }
+        console.log('Cart:', cart)
+    
+    </script>
+
+</head>
+<!--
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="{% url 'store' %}">Ecom</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'store' %}">Store <span class="sr-only">(current)</span></a>
+          </li>
+     
+        </ul>
+        <div class="form-inline my-2 my-lg-0">
+            <a href="#"class="btn btn-warning">Login</a>
+            
+            <a href="{% url 'cart' %}">
+                <img  id="cart-icon" src="{% static 'images/cart.png' %}">
+            </a>
+            <p id="cart-total">{{cartItems}}</p>
+
+        </div>
+      </div>
+    </nav> 
+    -->
+
+    <body>
+
+    <header class="header" id="header">
+        
+        <a href="#" class="logo" > <i class="fas fa-shopping-basket"></i>Joetom Food</a>
+       
+     
+    
+        <nav class="navbar">
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'store' %}">Shop</a>
+            <a href="{% url 'contact' %}">Contact</a>
+            <a href="">About Us</a>
+            
+        </nav>
+    
+        <div class="icons">
+            <div class="fas fa-bars" id="menu-btn"></div>
+            <a href="{% url 'cart' %}"><div class="fas fa-shopping-cart" id="cart-btn"></div></a>
+            <a href="{% url 'login' %}"><div class="fas fa-user" id="login-btn"></div></a>
+        </div>
+
+
+        
+
+
+    </header>
+
+    
+
+    <section>    
+    <div class="container">
+            <br>
+            {% block content %}
+
+
+            {% endblock content %}
+    </div>
+    </section>
+
+<footer class="footer">    
+        
+    
+    <div class="container">
+        <div class="row">
+            
+            <div class="footer-col">
+                
+                <ul class="social-media">
+                   <li> <a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                    <li><a href="#" ><ion-icon name="logo-instagram"></ion-icon></a></li>
+                    <li><a href="#" ><ion-icon name="logo-twitter"></ion-icon></a></li>
+                    <li> <a href="#" ><ion-icon name="logo-whatsapp"></ion-icon></a></li>
+                </ul>
+                   <ul class="links">
+                    <li><a href="#"> Home </a></li>
+                    <li><a href="#"> Products </a></li>
+                    <li><a href="#"> About Us </a></li>
+                   <li> <a href="#"> Contact Us </a></li>
+                </ul>
+
+                <p>©2022 QuickFex Development &nbsp;&nbsp;|&nbsp; &nbsp;&nbsp;&nbsp;All Rights Reserved</p>
+     </div>
+        </div>
+    </div>
+</footer>
+
+
+<style type="text/css">
+
+    .footer{
+    position: relative;
+    min-height: 100px;
+    padding: 20px 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(36, 188, 36);
+    flex-direction: column;
+  
+}
+
+.social-media, .footer .links{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+
+}
+
+li{
+    list-style: none;
+    
+}
+
+.footer .social-media li a{
+    font-size: 2rem;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+    color: white;
+   
+}
+
+.footer .social-media li a:hover{
+    transform: translateY(-10px);
+
+}
+
+.footer .links li a{
+    font-size: 16px;
+    color: white;
+    margin: 0 10px;
+    display: inline-block;
+    text-decoration: none;
+    opacity: 1;
+ }
+
+ .footer .links li a:hover{
+    opacity: 0.75;
+ }
+
+ .footer p{
+    text-align: center;
+    color: white;
+  
+ }
+</style>
+    
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="{% static 'js/cart.js' %}"></script>
+
+    <script type="text/javascript" src="{% static 'js/home.js' %}"></script>
+
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+</body>
+</html>
