@@ -1,10 +1,13 @@
 from django.urls import path
 from . import views
+from django.contrib import admin
+
 
 urlpatterns = [
         #Leave as empty string for base url
 	path('', views.home, name="home"),
 	path('store/', views.store, name="store"),
+	path('admin/', admin.site.urls),
 	path('cart/', views.cart, name="cart"),
 	path('checkout/', views.checkout, name="checkout"),
 	path('contact/', views.contact, name="contact"),
