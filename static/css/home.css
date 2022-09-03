@@ -454,5 +454,84 @@ section{
     color: #333;
 }
     
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.about{
+    width: 100%;
+    padding: 78px 0;
+    background-color: #333;
+    height: 100vh;
+
+}
+
+.about img{
+    height: 600px;
+    width: 420px;
+}
+
+.aboutus{
+    width: 550px;
+}
+
+.abt{
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.about h2{
+    color: white ;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.about h4{
+    color: ;
+    font-size: 25px;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+}
+
+.about span{
+    color: rgb(36, 188, 36) ;
+}
+
+.about p{
+    color: #fcfc;
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+
+.about button{
+    background: rgb(36, 188, 36) ;
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 13px 30px;
+    border-radius: 30px;
+    transition: 0.2s;
+
+}
+
+.about button:hover{
+    cursor:pointer ;
+    background: transparent;
+       border:2px solid  rgb(36, 188, 36);
+
+}
+
+
     
     

@@ -26,6 +26,11 @@ def contact(request):
      context = {}
      return render(request, 'store/ContactUs.html', context)
 
+def aboutus(request):
+     context = {}
+     return render(request, 'store/Aboutus.html', context)
+
+
 
 def loginPage(request):
 
