@@ -374,44 +374,26 @@ section{
 
  .contact{
      width: 100%;
-     margin-left: 40px;
+    margin-left: 40px;
      justify-content: center;
      align-items: center;
      padding: 50px 70px;
      flex-direction: column;
-    display: flex;
-    position: relative;
-    
-      }
-
-      .contact:after{
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-image: url(ban3.jpg);
-        background-repeat:  no-repeat;
-        background-position: center;
-        background-size: cover;
-        
-        filter: blur(8px);
-        z-index: -1;
-      }
-
-
+      display: flex;
+     
+      position: relative;
+ }
+  
   .contactform{
  
     width: 40%;
      padding: 40px;
-     background-color:rgba(0, 0, 0, 0.5);
-     border-radius: 5px;
-     box-shadow: 0 0 10px #000;
-
+     background: #fff;
  }
  
  .contactform h2{
      font-size: 30px;
-     color: white;
+     color: #333;
      font-weight: 500;
  
  }
@@ -420,21 +402,18 @@ section{
      position: relative;
      width: 100%;
      margin-top: 10px;
-     }
- 
+ }
  
  .contactform .inputbox input,
  .contactform .inputbox textarea{
-     width: 100%;
-     padding: 5px 0;
+      width: 100%;
+      padding: 5px 0;
      font-size: 16px;
      margin: 10px 0;
      border: none;
-     border-bottom: 1.5px solid ;
+     border-bottom: 1.5px solid black;
      outline: none;
      resize: none;
-     background: transparent;
-    
  
  }
  
@@ -447,7 +426,7 @@ section{
      margin: 10px 0;
      pointer-events: none;
      transition: 0.5s;
-     color: white;
+     color: #555;
  }
  
  .contactform .inputbox input:focus ~ span,
@@ -470,16 +449,15 @@ section{
    cursor: pointer;
    padding: 10px;
    font-size: 18px;
-   transition: ease-out 0.2s;
-  
+   box-shadow: inset 0 0 0 0 white;
  }
  
  .contactform .inputbox input[type="submit"]:hover{
  
-   background: white;
+     box-shadow: inset 0 36px 0 0 yellow;
      color: #333;
  }
-
+     
     
 .signup{
         width: 360px;
