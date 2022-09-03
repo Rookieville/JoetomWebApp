@@ -1,18 +1,11 @@
-<!DOCTYPE html>
+{% extends 'store/main.html' %}
 {% load static %}
-<html>
-    <head>
-        <title>
+{% block content %}
+<section>
 
-        </title>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, intial-scale=1.0">
-        <link rel="stylesheet" href="{% static 'css/home.css' %}" >
-    </head>
-    
-    
- <body>
+
+</section>
+
 
         
 
@@ -32,7 +25,7 @@
              that are then solved one at a time by calculating the answers to the larger questions using the information from the 
              smaller ones. 
          </p>
-        <a href=""> <button>Here</button></a>
+        <a href="{% url 'home' %}"> <button>Here</button></a>
     </div>
     </div>
        
@@ -41,18 +34,4 @@
    
    
    
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-    </body>
-</html>
+{% endblock content %}
