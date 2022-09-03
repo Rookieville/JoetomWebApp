@@ -9,7 +9,7 @@
 }
 
 html{
-    font-size: 70%;
+    font-size: 62.5%;
     overflow-x: hidden;
     scroll-behavior: smooth;
     scroll-padding-top: 7rem;
@@ -216,7 +216,7 @@ section{
     content: attr(data-text);
     position: absolute ;
      top: 0;
-    left: 0;
+     left: 0;
      width: 0;
      height: 100%;
      white-space: nowrap;
