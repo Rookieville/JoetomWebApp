@@ -304,6 +304,7 @@ section{
     
     .products .product-slider{
         padding:1rem;
+        display: flex;
     }
     
     .products .product-slider:first-child{
