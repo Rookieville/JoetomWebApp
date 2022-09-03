@@ -109,7 +109,7 @@ def store(request):
      context = {'products':products, 'cartItems':cartItems}
      return render(request, 'store/store.html', context)
 
-@login_required(login_url='login')
+#@login_required(login_url='login')
 def cart(request):
      data = cartData(request)
 
@@ -120,7 +120,7 @@ def cart(request):
      context = {'items':items, 'order':order, 'cartItems':cartItems}
      return render(request, 'store/cart.html', context)
 
-@login_required(login_url='login')
+#@login_required(login_url='login')
 def checkout(request):
      data = cartData(request)
      
